@@ -23,21 +23,30 @@
 
   <h4>Add Review to restaurant <%= @restaurant.name %></h4>
 
+  <div class='col-6'>
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :rating, collection: [0, 1, 2, 3, 4, 5], default: 0 %>
+      <%= f.input :content, placeholder: 'Write your comment here' %>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
 
-  <%= simple_form_for [@restaurant, @review] do |f| %>
-    <%= f.input :rating, collection: [0, 1, 2, 3, 4, 5], default: 0 %>
-    <%= f.input :content, placeholder: 'Write your comment here' %>
-    <%= f.button :submit, class: 'btn btn-primary' %>
-  <% end %>
+   <%# <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reviewsList" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button> %>
 
-  <div class='card'>
+  <div class='card col-6'>
+
     <h3>Reviews</h3>
+    
     <ul>
       <% @restaurant.reviews.each do |review| %>
         <li><span class='comment'><strong>Comment:</strong> <%= review.content %> | <%= review.rating %> Stars</span></li>
       <%  end %>
     </ul>
   </div>
+
+
 
 
   <%= link_to 'Back', restaurants_path, class: 'btn btn-success' %>
