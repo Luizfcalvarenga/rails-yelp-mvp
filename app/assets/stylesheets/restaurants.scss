@@ -1,0 +1,63 @@
+// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&family=Kanit:ital,wght@0,200;1,100;1,200&family=Kufam:ital@0;1&family=Roboto:ital,wght@0,300;1,100&display=swap');
+
+h1 {
+ font-family: 'Kanit';
+ font-weight: bold;
+}
+
+.comment {
+  margin-left: 5px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-left: 5px;
+  font-family: 'Kanit';
+  font-weight: bold;
+}
+
+th {
+  font-family: 'Kanit';
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body {
+  background-color: rgb(183,183,164);
+}
+
+.btn-success {
+  border-radius: 7px;
+
+}
+
+.btn-success:hover {
+  background-color: rgb(32,223,138);
+  border-color: rgb(32,223,138);
+}
+
+.btn-primary {
+  border-radius: 7px;
+}
+
+.btn-primary:hover {
+  border-radius: 7px;
+}
+
+.form-actions {
+  margin-bottom: 10px;
+}
